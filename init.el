@@ -178,8 +178,8 @@
 (add-to-list 'elixir-mode-hook 'alchemist-mode)
 (add-to-list 'elixir-mode-hook 'company-mode)
 (setq alchemist-hooks-compile-on-save t)
-
-
+(setq alchemist-goto-erlang-source-dir "/usr/local/Cellar/erlang/20.2.2/lib/erlang") ;; todo not test yet
+(setq alchemist-goto-elixir-source-dir "/Users/lorancechen/version_control_project/_open_source/elixir/")
 
 ;;multi frame use neotree: https://github.com/syl20bnr/spacemacs/issues/5682
 ;;(setq projectile-switch-project-action 'neotree-projectile-action)
