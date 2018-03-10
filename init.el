@@ -35,6 +35,9 @@
 		      all-the-icons
 		      idris-mode
 		      haskell-mode
+		      elixir-mode
+		      alchemist
+		      racket-mode
 		      ) "Default packages")
 
 (defun my-package-installed-p ()
@@ -167,6 +170,20 @@
 
 ;;neotree
 (require 'neotree)
+
+
+;;elixir alchemist
+(require 'elixir-mode)
+(require 'alchemist)
+(add-to-list 'elixir-mode-hook 'alchemist-mode)
+(add-to-list 'elixir-mode-hook 'company-mode)
+(setq alchemist-hooks-compile-on-save t)
+
+
+
+;;multi frame use neotree: https://github.com/syl20bnr/spacemacs/issues/5682
+;;(setq projectile-switch-project-action 'neotree-projectile-action)
+
 (global-set-key [f8] 'neotree-toggle)
 ;;do not auto refresh tree to current open file
 (setq neo-autorefresh nil)
@@ -174,8 +191,21 @@
 ;;theme
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+;; ;;org mode
+;;设定为自动换行————显示上是多个行，实际是一行
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
+;; racket
+(add-hook 'racket-mode-hook
+          (lambda ()
+            (define-key racket-mode-map (kbd "C-c r") 'racket-run)))
 
+(add-hook 'racket-mode-hook      #'racket-unicode-input-method-enable)
+(add-hook 'racket-repl-mode-hook #'racket-unicode-input-method-enable)
+
+(setq tab-always-indent 'complete)
+;;(require 'smartparens-config)
+(setq racket-program "/usr/local/bin/racket")
 
 ;; ;; xterm with the resource ?.VT100.modifyOtherKeys: 1
 ;; ;; GNU Emacs >=24.4 sets xterm in this mode and define
