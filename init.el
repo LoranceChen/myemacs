@@ -4,6 +4,7 @@
 
 ;;basic
 (global-linum-mode 1)
+(setq ring-bell-function 'ignore) ;;forbid ding sound
 
 ;;set package repository
 (require 'package)
@@ -35,6 +36,7 @@
 		      all-the-icons
 		      idris-mode
 		      haskell-mode
+		      erlang
 		      elixir-mode
 		      alchemist
 		      racket-mode
@@ -111,7 +113,9 @@
 (load-theme 'monokai t)
 
 
-
+;; common
+  ;; company mode for all file
+(add-hook 'after-init-hook 'global-company-mode)
 
 
 
