@@ -1,5 +1,6 @@
-*
+/*
 
 !/init.el
 !/README.md
 !.gitignore
+!/lib/
