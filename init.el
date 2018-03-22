@@ -37,9 +37,19 @@
 		      idris-mode
 		      haskell-mode
 		      erlang
+		      edts
 		      elixir-mode
 		      alchemist
 		      racket-mode
+		      sql-indent
+		      nyan-mode
+		      ;;dracula-theme
+		      ;;rebecca-theme
+		      ;;zenburn-theme
+		      ;;doom-themes
+		      ;;material-theme
+		      ;;moe-theme
+		      ;;solarized-theme
 		      ) "Default packages")
 
 (defun my-package-installed-p ()
@@ -111,6 +121,13 @@
 
 ;;theme
 (load-theme 'monokai t)
+;;(load-theme 'dracula t)
+;;(load-theme 'rebecca t)
+;;(require 'doom-themes)
+;;(load-theme 'doom-molokai t)
+;;(load-theme 'material t)
+;;(load-theme 'moe t)
+
 
 
 ;; common
@@ -182,7 +199,8 @@
 (add-to-list 'elixir-mode-hook 'alchemist-mode)
 (add-to-list 'elixir-mode-hook 'company-mode)
 (setq alchemist-hooks-compile-on-save t)
-(setq alchemist-goto-erlang-source-dir "/usr/local/Cellar/erlang/20.2.2/lib/erlang") ;; todo not test yet
+
+(setq alchemist-goto-erlang-source-dir "/Users/lorancechen/soft/otp-master/")
 (setq alchemist-goto-elixir-source-dir "/Users/lorancechen/version_control_project/_open_source/elixir/")
 
 ;;multi frame use neotree: https://github.com/syl20bnr/spacemacs/issues/5682
@@ -269,3 +287,7 @@
 ;; load file
 (setq custom-file "~/.emacs.d/lib/custom-file.el")
 (load custom-file)
+(load "~/.emacs.d/lib/display")
+(load "~/.emacs.d/lib/elixir.el")
+(load "~/.emacs.d/lib/others.el")
+
