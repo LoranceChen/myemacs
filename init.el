@@ -6,6 +6,8 @@
 (global-linum-mode 1)
 (setq ring-bell-function 'ignore) ;;forbid ding sound
 
+(message "000000-1")
+
 ;;set package repository
 (require 'package)
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
@@ -18,7 +20,7 @@
 
 (package-initialize)
 
-
+(message "00000000")
 ;;auto load dependency packages if needed
 (require 'cl) ;;common lisp package
 (defvar my-packages '(
@@ -43,13 +45,14 @@
 		      racket-mode
 		      sql-indent
 		      nyan-mode
-		      ;;dracula-theme
-		      ;;rebecca-theme
-		      ;;zenburn-theme
-		      ;;doom-themes
-		      ;;material-theme
-		      ;;moe-theme
-		      ;;solarized-theme
+		     ;; dracula-theme
+		      spacemacs-theme
+		     ;; rebecca-theme
+		     ;; zenburn-theme
+		     ;; doom-themes
+		     ;; material-theme
+		     ;; moe-theme
+		      solarized-theme
 		      ) "Default packages")
 
 (defun my-package-installed-p ()
@@ -66,7 +69,7 @@
 
 
 
-
+(message "00001")
 
 
 
@@ -120,15 +123,13 @@
 
 
 ;;theme
-(load-theme 'monokai t)
-;;(load-theme 'dracula t)
-;;(load-theme 'rebecca t)
-;;(require 'doom-themes)
-;;(load-theme 'doom-molokai t)
-;;(load-theme 'material t)
-;;(load-theme 'moe t)
+(load-theme 'spacemacs-dark t) ;;auto complete font is ugly. be used to load font bold at first
+;;(load-theme 'monokai t) ;; keyword is red
+;;(load-theme 'dracula t) ;; keyword is white
 
-
+;;(load-theme 'rebecca t) ;; auto complete is to dark 
+(load-theme 'solarized-dark t) ;; color to drawn(憔悴的)
+;;(load-theme 'material t) ;;don't like yellow keyword
 
 ;; common
   ;; company mode for all file
@@ -285,9 +286,9 @@
  )
 
 ;; load file
-(setq custom-file "~/.emacs.d/lib/custom-file.el")
-(load custom-file)
-(load "~/.emacs.d/lib/display")
-(load "~/.emacs.d/lib/elixir.el")
-(load "~/.emacs.d/lib/others.el")
+;;(setq custom-file "~/.emacs.d/lib/custom-file.el")
+;;(load custom-file)
+;;(load "~/.emacs.d/lib/display.el")
+;;(load "~/.emacs.d/lib/elixir.el")
+;;(load "~/.emacs.d/lib/others.el")
 
