@@ -2,4 +2,4 @@
 (nyan-mode t)
 
 ;; font
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 110)
