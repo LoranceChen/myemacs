@@ -58,7 +58,7 @@
 ;;)
 
 ;;window-resize
-(global-set-key (kbd "C-}") 'shrink-window-horizontally)
-(global-set-key (kbd "C-{") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-\"") 'shrink-window)
-(global-set-key (kbd "C-:") 'enlarge-window)
+(global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-M-<down>") 'shrink-window)
+(global-set-key (kbd "C-M-<up>") 'enlarge-window)
