@@ -40,7 +40,7 @@
 		      idris-mode
 		      haskell-mode
 		      erlang
-		      edts
+		      ;;edts
 		      elixir-mode
 		      alchemist
 		      racket-mode
@@ -56,6 +56,9 @@
 		      solarized-theme
 		      ace-window
 		      hydra
+		      ;flycheck
+		      ;flycheck-tip
+		      ;company-distel
 		      ) "Default packages")
 
 (defun my-package-installed-p ()
@@ -220,6 +223,7 @@
 
 (setq alchemist-goto-erlang-source-dir "/Users/lorancechen/soft/otp-master/")
 (setq alchemist-goto-elixir-source-dir "/Users/lorancechen/version_control_project/_open_source/elixir/")
+
 
 ;;multi frame use neotree: https://github.com/syl20bnr/spacemacs/issues/5682
 ;;(setq projectile-switch-project-action 'neotree-projectile-action)
